@@ -1,0 +1,24 @@
+<div class="fluid-container">
+	<div class="jumbotron organization col-md-12">
+		<h2>조직도</h2>
+		<hr class="m-y-2">
+		<uib-accordion close-others={{aboutOrganization.OneAtATime}}>
+			<div uib-accordion-group class="panel-default" heading="총괄" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+				<div ng-repeat="manager in aboutOrganization.managers">
+					<p>{{manager.job}}</p>
+					<p>{{manager.name}}</p>
+				</div>
+			</div>
+
+			<div uib-accordion-group class="panel-default" heading="{{else.group}}" ng-repeat="else in aboutOrganization.elses">
+				<div ng-repeat="group in else.data">
+					<p>{{group.team}}</p>
+					<div ng-repeat="person in group.people">
+						<p>{{person.job}}</p>
+						<p>{{person.name}}</p>
+					</div>
+				</div>
+			</div>
+		</uib-accordion>
+	</div>
+</div>

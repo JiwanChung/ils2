@@ -1,0 +1,5 @@
+<uib-tabset active="activePill" vertical="true" type="pills">
+	<uib-tab index="$index + 1" ng-repeat="tab in leftNav.tabs" heading={{tab.title}}>
+    	<a href={{tab.content}}></a>
+    </uib-tab>
+</uib-tabset>

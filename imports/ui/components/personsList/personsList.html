@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <person-add ng-show="personsList.isLoggedIn"></person-add>
+
+      <div class="alert alert-warning" role="alert" ng-hide="personsList.isLoggedIn">
+        <strong>Warning!</strong>
+        Log in to create a person!
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>List of persons:</h2>
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="search" ng-model="personsList.searchText" placeholder="Search" class="form-control"/>
+        </div>
+        <persons-sort class="form-group" on-change="personsList.sortChanged(sort)" property="name" order="1"></persons-sort>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="persons">
+        <li dir-paginate="person in personsList.persons | itemsPerPage: personsList.perPage" total-items="personsList.personCount">
+          <div class="row">
+            <div class="col-sm-8">
+              <h3 class="person-name">
+                <a ui-sref="personDetails({ personId: person._id })">{{person.name}}</a>
+              </h3>
+              <p class="person-description">
+                {{person.description}}
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <person-remove person="person" ng-show="personsList.isOwner(person)"></person-remove>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <dir-pagination-controls on-page-change="personList.pageChanged(newPageNumber)"></dir-pagination-controls>
+    </div>
+  </div>
+</div>
