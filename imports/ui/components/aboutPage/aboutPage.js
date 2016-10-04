@@ -5,6 +5,8 @@ import utilsPagnination from 'angular-utils-pagination';
 
 import template from './aboutPage.html';
 
+import { name as AboutMenu } from '../aboutMenu/aboutMenu';
+
 import { name as AboutGreetings } from '../aboutGreetings/aboutGreetings';
 import { name as AboutHistory } from '../aboutHistory/aboutHistory';
 import { name as AboutOrganization } from '../aboutOrganization/aboutOrganization';
@@ -29,6 +31,7 @@ export default angular.module(name, [
   angularMeteor,
   uiRouter,
   utilsPagnination,
+  AboutMenu,
   AboutGreetings,
   AboutHistory,
   AboutOrganization,
