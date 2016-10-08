@@ -7,6 +7,7 @@ import uiBootstrap from 'angular-ui-bootstrap';
 import angularScroll from 'angular-scroll';
 import angularSticky from 'angular-sticky-plugin';
 import ngMaterial from 'angular-material';
+import ngMap from 'ngMap';
 
 import template from './ils.html';
 import { name as PersonsList } from '../personsList/personsList';
@@ -21,14 +22,7 @@ import { name as AffiliationPage } from '../affiliationPage/affiliationPage';
 import { name as PeoplePage } from '../peoplePage/peoplePage';
 import { name as LinksPage } from '../linksPage/linksPage';
 
-class Ils {
-	constructor($scope, $reactive) {
-		'ngInject';
- 
-   		$reactive(this).attach($scope);
-
-	}
-}
+class Ils {}
 
 
 const name = 'ils';
@@ -55,7 +49,7 @@ export default angular.module(name, [
   MainCarousel,
   MainAccordian,
   'accounts.ui',
-  'ngMap'
+  ngMap
 ]).component(name, {
   template,
   controllerAs: name,
