@@ -9,8 +9,7 @@ class AboutMap {
  
     $reactive(this).attach($scope);
 
-    this.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1UNbFEvd3snhq4xCLRe2QDQHchq0xzBc";
-  }
+   }
 }
 
 const name = 'aboutMap';
