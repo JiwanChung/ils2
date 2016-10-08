@@ -1,7 +1,7 @@
 <div class="fluid-container">
 	<div class="jumbotron organization col-md-12">
 		<h2>조직도</h2>
-		<hr class="m-y-2">
+		<hr class="m-y-2" />
 		<uib-accordion close-others={{aboutOrganization.OneAtATime}}>
 			<div uib-accordion-group class="panel-default" heading="총괄" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
 				<div ng-repeat="manager in aboutOrganization.managers">

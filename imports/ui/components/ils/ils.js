@@ -7,6 +7,7 @@ import uiBootstrap from 'angular-ui-bootstrap';
 import angularScroll from 'angular-scroll';
 import angularSticky from 'angular-sticky-plugin';
 import ngMaterial from 'angular-material';
+import ngMap from 'ngmap';
 
 import template from './ils.html';
 import { name as PersonsList } from '../personsList/personsList';
@@ -22,7 +23,6 @@ import { name as PeoplePage } from '../peoplePage/peoplePage';
 import { name as LinksPage } from '../linksPage/linksPage';
 
 class Ils {}
-
 
 const name = 'ils';
  
@@ -47,7 +47,8 @@ export default angular.module(name, [
   Bfooter,
   MainCarousel,
   MainAccordian,
-  'accounts.ui'
+  'accounts.ui',
+  ngMap
 ]).component(name, {
   template,
   controllerAs: name,

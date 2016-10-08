@@ -1,8 +1,24 @@
 <div class="fluid-container">
 	<div class="jumbotron greetings" layout="column">
 		<h2>오시는 길</h2>
-		<hr class="m-y-2">
-		
+		<hr class="m-y-2" />
+		<div flex class="mapcon">
+			<div map-lazy-load="https://maps.google.com/maps/api/js"
+	  map-lazy-load-params="{{aboutMap.googleMapsUrl}}" style="display:block; width: 68%; float:left; height: 100%">
+				<ng-map zoom="14" center="서울특별시 서대문구 신촌동 134 연세대학교 학술정보원(연세·삼성 학술정보관)" style="height:90%" >
+			        <directions
+			          draggable="true"
+			          panel="directions-panel"
+			          travel-mode="TRANSIT"
+			          origin="서울특별시 서대문구 신촌로 93"
+			          destination="서울특별시 서대문구 신촌동 134 연세대학교 학술정보원(연세·삼성 학술정보관)">
+			        </directions>
+			    </ng-map>
+			</div>
+
+			<div id="directions-panel" style="width: 28%; float:left; height: 100%; overflow: auto; padding: 0px 5px">
+			</div>
+		</div>
 		<h3 flex>서대문구 연세로 50 연세대학교 학술정보원 7층 법학연구원</h3>
 	</div>
 </div>
