@@ -1,0 +1,15 @@
+  <div uib-carousel active=0 interval=5000 no-wrap=false>
+      <div uib-slide ng-repeat="slide in mainCarousel.slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}" class="img-responsive" style="margin:auto;" class="carouselimage">
+        <div class="carousel-caption">
+          <div class="framew">
+            <div class="slidename">
+              <h4>{{slide.title}}</h4>
+            </div>
+            <div class="slidetext">
+              <p>{{slide.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

@@ -1,0 +1,32 @@
+persons-list {
+  display: block;
+  padding: 25px 0;
+
+  ul.persons {
+    padding-left: 0;
+    list-style-type: none;
+
+    > li {
+      padding: 15px;
+      background-color: #fff;
+      margin: 15px 0;
+      border: 3px solid #eaeaea;
+
+     .person-name {
+       margin-top: 0px;
+       margin-bottom: 20px;
+       a {
+         text-decoration: none !important;
+         font-weight: 400;
+       }
+     }
+     .person-description {
+       font-weight: 300;
+       padding-left: 18px;
+       font-size: 14px;
+     }
+    }
+  }
+}
+
+@import "../personAddButton/personAddButton.less";

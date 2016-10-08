@@ -1,0 +1,16 @@
+<nav hl-sticky="topmenu" class="navbar navbar-default stickycon" role="navgation">
+	<div class="navbar-header">
+			<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+		</div>
+	<div class="collapse navbar-collapse nopadding" uib-collapse="isNavCollapsed" justified="true">
+		<ul class="nav navbar-nav col-md-12 nopadding">
+	    	<li ng-repeat="tab in topMenu.tabs track by tab.num" class="topli">
+	    		<a index="tab.num" href="{{tab.link}}" class="topmenutext">
+	    			{{tab.title}}
+	    		</a>
+	    	</li>
+	    </ul>
+	</div>
+</div>

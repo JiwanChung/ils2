@@ -1,0 +1,16 @@
+<md-dialog aria-label="New person" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>New person</h2>
+      <span flex></span>
+      <md-button ng-click="personAddModal.close()">
+        Close
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <person-add done="personAddModal.close()"></person-add>
+    </div>
+  </md-dialog-content>
+</md-dialog>

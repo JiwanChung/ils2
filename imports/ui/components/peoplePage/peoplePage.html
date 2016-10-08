@@ -1,0 +1,28 @@
+<section>
+	<div class="peoplelist">
+		<div layout="column">
+		    <div flex="100">
+		      <h1 class="peopletitle">연구원 사람들</h1>
+		      <md-divider md-inset class="divider"></md-divider>
+		      <form class="form-inline peoplesearch">
+		        <div class="form-group peopleform">
+		          <input type="search" ng-model="peoplePage.searchText" placeholder="Search" class="form-control"/>
+		        </div>
+		        <persons-sort class="form-group" on-change="peoplePage.sortChanged(sort)" property="name" order="1"></persons-sort>
+		      </form>
+		    </div>
+
+			<people-tiles flex="100" persons="peoplePage.persons"></people-tiles>
+			
+			<md-list layout="column">
+				<md-list-item flex class="md-3-line aperson" style="border-right-color: {{person.color}};border-bottom-color: {{person.color}}" ng-repeat="person in peoplePage.persons" ng-click="null">
+		          <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+		          <div class="md-list-item-text" layout="column">
+		            <h3>{{person.name}}</h3>
+		            <h4>{{person.job}}</h4>
+		            <p>{{person.description}}</p>
+		          </div>
+		        </md-list-item>
+		    </md-list>
+	</div>
+</section>

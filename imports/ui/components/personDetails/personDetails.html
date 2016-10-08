@@ -1,0 +1,16 @@
+The person your selected is:
+<form>
+  Person name: <input type="text" ng-model="personDetails.person.name" />
+  Description: <input type="text" ng-model="personDetails.person.description" />
+  Public Person? <input type="checkbox" ng-model="personDetails.person.public">
+  <button ng-click="personDetails.save()">Save</button>
+</form>
+
+<button ui-sref="persons">Back</button>
+
+<ul>
+  Users:
+  <li ng-repeat="user in personDetails.users">
+    <div>{{ user.emails[0].address }}</div>
+  </li>
+</ul>

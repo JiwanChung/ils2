@@ -1,0 +1,36 @@
+<section class="col-md-12">
+	<div class="linkslist">
+		<div class="row">
+		    <div class="col-md-12">
+		      <h1>관련 사이트</h1>
+		      <form class="form-inline peoplesearch">
+		        <div class="form-group">
+		          <input type="search" ng-model="linksPage.searchText" placeholder="Search" class="form-control"/>
+		        </div>
+		        <persons-sort class="form-group" on-change="linksPage.sortChanged(sort)" property="name" order="1"></persons-sort>
+		      </form>
+		    </div>
+		  <div class="row">
+		    <div class="col-md-6">
+		      <ul class="links">
+		        <li ng-repeat="linked in linksPage.links">
+		        	<h3>{{linked.name}}</h3>
+		        	<li ng-repeat="linke in linked.content">
+			          <div class="row">
+			            <div class="col-sm-8">
+			              <h3 class="link-name">
+			              	{{linke.name}}
+			              </h3>
+			              <a href="{{linke.link}}" class="person-description">
+			                {{linke.link}}
+			              </a>
+			            </div>
+			          </div>
+			        </li>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</section>

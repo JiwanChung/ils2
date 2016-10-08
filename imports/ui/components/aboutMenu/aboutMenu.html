@@ -1,0 +1,16 @@
+<nav hl-sticky="innermenu" class="navbar navbar-default stickycon" role="navgation">
+	<div class="navbar-header">
+			<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+		</div>
+	<div class="collapse navbar-collapse nopadding" uib-collapse="isNavCollapsed" justified="true">
+		<ul class="nav navbar-nav nopadding">
+	    	<li ng-repeat="tab in aboutMenu.tabs track by tab.num" class="aboutli">
+	    		<a du-smooth-scroll du-scrollspy index="tab.num" href="{{tab.link}}" class="innermenutext">
+	    			{{tab.title}}
+	    		</a>
+	    	</li>
+	    </ul>
+	</div>
+</div>
