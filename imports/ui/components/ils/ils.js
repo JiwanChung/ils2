@@ -5,7 +5,7 @@ import angularTouch from 'angular-touch';
 import uiRouter from 'angular-ui-router';
 import uiBootstrap from 'angular-ui-bootstrap';
 import angularScroll from 'angular-scroll';
-import angularSticky from 'angular-sticky-plugin';
+import angularSticky from 'angular-sticky-index';
 import ngMaterial from 'angular-material';
 import ngMap from 'ngmap';
 
